@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(el);
 
 // 4) Create a component
 function App() {
-  return <h1>{new Date().toLocaleTimeString()}</h1>;
+  return <input style={{ border: '2px solid pink' }} />;
 }
 
 // 5) Show the component on the screen
