@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    // THIS IS THE ONLY DIRECT ASSIGNMENT TO this.state
-    // every other assignment should be with this.setState (see below)
-    this.state = { lat: null, errorMessage: '' };
-  }
+  //   // THIS IS THE ONLY DIRECT ASSIGNMENT TO this.state
+  //   // every other assignment should be with this.setState (see below)
+  //   this.state = { lat: null, errorMessage: '' };
+  // }
+
+  // THIS IS THE SAME AS THE CONSTRUCTOR FUNCTION ABOVE
+  state = { lat: null, errorMessage: '' };
 
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
