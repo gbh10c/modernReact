@@ -23,20 +23,20 @@ class App extends React.Component {
   }
 
   renderContent() {
-if (this.state.errorMessage && !this.state.lat) {
+    if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
 
     if (!this.state.errorMessage && this.state.lat) {
-      return <SeasonDisplay lat={this.state.lat} />
+      return <SeasonDisplay lat={this.state.lat} />;
     }
 
-    return <Loader message='Please accept location request' />;
+    return <Loader message='Fetching location information' />;
   }
 
   render() {
-
-  }   
+    return <div>{this.renderContent()}</div>;
+  }
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'));
